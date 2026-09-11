@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Visto de cima: deitado de lado, joelhos dobrados, braço de cima aberto num arco">
+<circle cx="30" cy="100" r="12"/>
+<path d="M45 100 L110 100"/>
+<path d="M110 100 L140 125 L115 152"/>
+<path d="M112 106 L142 131 L118 158"/>
+<path d="M48 100 L52 152"/>
+<path class="alvo" stroke-width="8" d="M48 100 L44 48"/>
+<path class="apoio" stroke-width="3" stroke-dasharray="6 8" d="M56 150 A52 52 0 0 1 48 48"/>
+<path class="apoio" stroke-width="3" d="M40 58 L48 46 L58 54"/>
+</svg>

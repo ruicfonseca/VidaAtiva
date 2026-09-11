@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="De pé, calcanhar puxado ao glúteo, mão na parede">
+<line class="chao" x1="15" y1="150" x2="185" y2="150" stroke-width="3"/>
+<line class="apoio" x1="30" y1="25" x2="30" y2="150" stroke-width="4"/>
+<circle cx="100" cy="38" r="12"/>
+<path d="M100 95 L100 55"/>
+<path d="M100 55 L70 65 L34 70"/>
+<path d="M100 55 L118 80 L126 100"/>
+<path d="M100 95 L100 122 L100 150 L113 150"/>
+<path class="alvo" stroke-width="8" d="M100 95 L104 122"/>
+<path d="M104 122 L126 102 L129 114"/>
+</svg>

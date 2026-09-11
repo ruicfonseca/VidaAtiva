@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Deitado de costas, tornozelo sobre o joelho oposto, mãos a puxar a coxa">
+<line class="chao" x1="15" y1="150" x2="185" y2="150" stroke-width="3"/>
+<circle cx="30" cy="138" r="12"/>
+<path d="M45 140 L105 140"/>
+<path d="M105 140 L108 92 L76 76"/>
+<path class="alvo" stroke-width="8" d="M105 140 L150 102"/>
+<path d="M150 102 L110 108"/>
+<path d="M45 140 L68 120 L100 116"/>
+<path d="M48 146 L72 128 L102 124"/>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Antebraço na ombreira da porta, tronco rodado para o lado oposto">
+<line class="chao" x1="15" y1="150" x2="185" y2="150" stroke-width="3"/>
+<line class="apoio" x1="140" y1="18" x2="140" y2="150" stroke-width="4"/>
+<circle cx="95" cy="36" r="12"/>
+<path d="M95 95 L95 52"/>
+<path class="alvo" stroke-width="8" d="M95 52 L140 52"/>
+<path d="M140 52 L140 24"/>
+<path d="M95 52 L72 100"/>
+<path d="M95 95 L112 122 L120 150 L132 150"/>
+<path d="M95 95 L80 122 L72 150 L60 150"/>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Braço esticado, palma para cima, outra mão a puxar os dedos">
+<path d="M100 172 L100 95"/>
+<path d="M65 95 L135 95"/>
+<path d="M100 95 L100 88"/>
+<circle cx="100" cy="72" r="14"/>
+<path d="M135 95 L160 95"/>
+<path class="alvo" stroke-width="8" d="M160 95 L184 95"/>
+<path d="M184 95 L187 111"/>
+<path d="M65 95 L108 125 L184 113"/>
+</svg>

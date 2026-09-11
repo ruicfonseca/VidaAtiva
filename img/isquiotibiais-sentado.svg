@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Sentado, perna esticada, tronco inclinado para o pé">
+<line class="chao" x1="15" y1="150" x2="185" y2="150" stroke-width="3"/>
+<circle cx="129" cy="81" r="12"/>
+<path d="M80 145 L118 95"/>
+<path d="M118 95 L160 140"/>
+<path d="M80 145 L55 120 L95 148"/>
+<path class="alvo" stroke-width="8" d="M80 145 L125 148 L165 146"/>
+<path d="M165 146 L168 130"/>
+</svg>

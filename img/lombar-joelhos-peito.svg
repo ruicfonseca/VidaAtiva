@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Deitado de costas, joelhos abraçados contra o peito">
+<line class="chao" x1="15" y1="150" x2="185" y2="150" stroke-width="3"/>
+<circle cx="30" cy="138" r="12"/>
+<path d="M45 140 L85 140"/>
+<path class="alvo" stroke-width="8" d="M85 140 L110 140"/>
+<path d="M110 140 L90 88 L125 95"/>
+<path d="M114 146 L96 94 L130 102"/>
+<path d="M45 140 L62 105 L102 96"/>
+</svg>

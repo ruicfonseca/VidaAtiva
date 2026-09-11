@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Posição da criança, sentado nos calcanhares, braços esticados no chão">
+<line class="chao" x1="15" y1="150" x2="185" y2="150" stroke-width="3"/>
+<circle cx="58" cy="126" r="11"/>
+<path d="M120 150 L165 150 L172 142"/>
+<path d="M120 150 L150 118"/>
+<path class="alvo" stroke-width="8" d="M150 118 Q118 96 82 124"/>
+<path d="M84 132 L26 149"/>
+<path d="M88 138 L32 152"/>
+</svg>

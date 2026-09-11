@@ -1,0 +1,45 @@
+[
+  {
+    "id": "manha-10",
+    "nome": "Manhã, 10 minutos",
+    "descricao": "Acordar o corpo todo, dos tornozelos ao pescoço. Feito no chão, ao lado da cama.",
+    "descanso_s": 5,
+    "passos": [
+      { "exercicio": "tornozelos-circulos" },
+      { "exercicio": "lombar-joelhos-peito" },
+      { "exercicio": "gluteos-figura4" },
+      { "exercicio": "rotacao-toracica-deitado" },
+      { "exercicio": "isquiotibiais-sentado" },
+      { "exercicio": "dorsal-crianca" },
+      { "exercicio": "flexores-anca-ajoelhado" },
+      { "exercicio": "trapezio-pescoco" }
+    ]
+  },
+  {
+    "id": "pos-treino-8",
+    "nome": "Pós-treino, 8 minutos",
+    "descricao": "Pernas e anca depois de correr ou de treino de força. Com o corpo ainda quente.",
+    "descanso_s": 5,
+    "passos": [
+      { "exercicio": "gemeos-parede" },
+      { "exercicio": "quadricipite-pe" },
+      { "exercicio": "isquiotibiais-sentado" },
+      { "exercicio": "flexores-anca-ajoelhado" },
+      { "exercicio": "gluteos-figura4" },
+      { "exercicio": "peitoral-ombreira", "duracao_s": 25 }
+    ]
+  },
+  {
+    "id": "secretaria-5",
+    "nome": "Secretária, 5 minutos",
+    "descricao": "Pescoço, ombros, peito e punhos. Tudo de pé ou sentado, sem ir ao chão.",
+    "descanso_s": 3,
+    "passos": [
+      { "exercicio": "trapezio-pescoco" },
+      { "exercicio": "peitoral-ombreira" },
+      { "exercicio": "punhos-extensao" },
+      { "exercicio": "quadricipite-pe", "duracao_s": 20 },
+      { "exercicio": "gemeos-parede", "duracao_s": 20 }
+    ]
+  }
+]

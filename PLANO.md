@@ -6,9 +6,9 @@ Estas decisões mudam o desenho da aplicação. Assumi as respostas marcadas com
 
 | Questão | Opções | Decisão |
 |---|---|---|
-| Onde é usada? | Telemóvel no chão / tablet / PC | **[assumido]** Telemóvel, ecrã grande à distância. Alongar faz-se no chão, não à secretária. |
+| Onde é usada? | Telemóvel no chão / tablet / PC | Telemóvel, ecrã grande à distância. Confirmado pelo utilizador. |
 | O que significa "local"? | Ficheiro HTML aberto no browser / servidor Python / app nativa | **[assumido]** PWA: um único site estático, sem servidor, dados no browser. Funciona offline e instala-se no ecrã inicial. |
-| Conteúdo visual? | Só texto / ilustrações / vídeo | **[assumido]** Texto e pistas verbais na v0. Ilustrações são o custo maior e não são o que faz a aplicação ser usada. |
+| Conteúdo visual? | Só texto / ilustrações / vídeo | Ilustrações de traço em SVG, com a zona alongada a cor. Decidido pelo utilizador. |
 | O que se regista? | Nada / sessões feitas / dor e amplitude | **[assumido]** Sessões feitas (data, rotina, duração). Métricas de dor e amplitude ficam para depois. |
 | Onde vive no repositório? | Raiz / subpasta | Repositório próprio, `VidaAtiva`. |
 
@@ -96,7 +96,10 @@ Objectivo: usar amanhã de manhã.
 - Voz e vibração no fim de cada passo.
 - Wake Lock.
 - Registo da sessão no histórico ao terminar.
-- Funciona aberto directamente do ficheiro (`file://`), sem service worker.
+- Ilustrações de traço para todos os exercícios.
+- Precisa de servidor HTTP (módulos ES); o service worker só entra com HTTPS ou localhost.
+
+**Estado: feita.**
 
 ### v1, uso diário
 - Editor de rotinas (escolher exercícios, ordem, duração) guardado em localStorage.

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Cabeça inclinada para o ombro, mão pousada na cabeça">
+<line class="apoio" x1="55" y1="172" x2="145" y2="172" stroke-width="3"/>
+<path d="M100 170 L100 95"/>
+<path d="M65 95 L135 95"/>
+<path class="alvo" stroke-width="8" d="M100 95 L112 78"/>
+<circle cx="121" cy="66" r="14"/>
+<path d="M135 95 L166 66 L120 50"/>
+<path d="M65 95 L58 150"/>
+</svg>

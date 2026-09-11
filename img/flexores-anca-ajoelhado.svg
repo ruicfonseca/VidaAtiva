@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Ajoelhado num joelho, outro pé à frente, anca avançada">
+<line class="chao" x1="15" y1="150" x2="185" y2="150" stroke-width="3"/>
+<circle cx="99" cy="34" r="12"/>
+<path d="M95 95 L98 50"/>
+<path d="M98 50 L90 75 L70 100"/>
+<path d="M95 95 L62 100 L62 150 L48 150"/>
+<path class="alvo" stroke-width="8" d="M95 95 L125 150"/>
+<path d="M125 150 L162 150 L168 140"/>
+</svg>

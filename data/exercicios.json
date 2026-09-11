@@ -1,0 +1,218 @@
+[
+  {
+    "id": "isquiotibiais-sentado",
+    "nome": "Isquiotibiais, sentado",
+    "categoria": "alongamento",
+    "tipo": "tempo",
+    "duracao_s": 30,
+    "bilateral": true,
+    "alvo": ["isquiotibiais"],
+    "posicao": "sentado",
+    "imagem": "img/isquiotibiais-sentado.svg",
+    "instrucoes": [
+      "Senta-te no chão com uma perna esticada e a outra dobrada, planta do pé contra a coxa.",
+      "Com as costas direitas, inclina o tronco a partir da anca em direcção ao pé da perna esticada.",
+      "Pára quando sentires a tensão atrás da coxa. Respira e mantém."
+    ],
+    "pistas": ["costas direitas, não curves", "o joelho da perna esticada fica relaxado"],
+    "evitar_se": ["dor lombar aguda", "lesão recente nos isquiotibiais"]
+  },
+  {
+    "id": "quadricipite-pe",
+    "nome": "Quadricípite, de pé",
+    "categoria": "alongamento",
+    "tipo": "tempo",
+    "duracao_s": 30,
+    "bilateral": true,
+    "alvo": ["quadricípite"],
+    "posicao": "de pé",
+    "imagem": "img/quadricipite-pe.svg",
+    "instrucoes": [
+      "De pé, apoia uma mão na parede para equilíbrio.",
+      "Dobra o joelho e segura o pé com a mão do mesmo lado, calcanhar em direcção ao glúteo.",
+      "Joelhos juntos, anca ligeiramente à frente. Sente a tensão na frente da coxa."
+    ],
+    "pistas": ["joelhos juntos", "anca ligeiramente à frente", "não arqueies as costas"],
+    "evitar_se": ["dor no joelho ao dobrar"]
+  },
+  {
+    "id": "gemeos-parede",
+    "nome": "Gémeos, contra a parede",
+    "categoria": "alongamento",
+    "tipo": "tempo",
+    "duracao_s": 30,
+    "bilateral": true,
+    "alvo": ["gémeos"],
+    "posicao": "de pé",
+    "imagem": "img/gemeos-parede.svg",
+    "instrucoes": [
+      "De frente para a parede, mãos apoiadas à altura dos ombros.",
+      "Leva uma perna atrás, esticada, calcanhar bem assente no chão e pé apontado para a parede.",
+      "Dobra o joelho da frente e avança a anca até sentires a tensão na barriga da perna de trás."
+    ],
+    "pistas": ["calcanhar de trás no chão", "pé de trás aponta para a frente"],
+    "evitar_se": ["lesão recente no tendão de Aquiles"]
+  },
+  {
+    "id": "flexores-anca-ajoelhado",
+    "nome": "Flexores da anca, ajoelhado",
+    "categoria": "alongamento",
+    "tipo": "tempo",
+    "duracao_s": 30,
+    "bilateral": true,
+    "alvo": ["flexores da anca", "psoas"],
+    "posicao": "ajoelhado",
+    "imagem": "img/flexores-anca-ajoelhado.svg",
+    "instrucoes": [
+      "Um joelho no chão (usa uma almofada), o outro pé à frente com o joelho a 90 graus.",
+      "Tronco direito. Contrai o glúteo do lado do joelho apoiado e avança a anca.",
+      "A tensão aparece na frente da anca e da coxa do lado de trás."
+    ],
+    "pistas": ["contrai o glúteo de trás", "tronco vertical, não inclines à frente"],
+    "evitar_se": ["dor no joelho apoiado, mesmo com almofada"]
+  },
+  {
+    "id": "gluteos-figura4",
+    "nome": "Glúteos, figura quatro",
+    "categoria": "alongamento",
+    "tipo": "tempo",
+    "duracao_s": 30,
+    "bilateral": true,
+    "alvo": ["glúteos", "piriforme"],
+    "posicao": "deitado",
+    "imagem": "img/gluteos-figura4.svg",
+    "instrucoes": [
+      "Deitado de costas, joelhos dobrados, pés no chão.",
+      "Cruza o tornozelo de um lado sobre o joelho do outro.",
+      "Agarra a coxa de baixo com as duas mãos e puxa em direcção ao peito. Sente a tensão no glúteo da perna cruzada."
+    ],
+    "pistas": ["cabeça e ombros no chão", "empurra ligeiramente o joelho cruzado para fora"],
+    "evitar_se": ["dor ciática aguda"]
+  },
+  {
+    "id": "peitoral-ombreira",
+    "nome": "Peitoral, na ombreira da porta",
+    "categoria": "alongamento",
+    "tipo": "tempo",
+    "duracao_s": 30,
+    "bilateral": true,
+    "alvo": ["peitoral", "ombro anterior"],
+    "posicao": "de pé",
+    "imagem": "img/peitoral-ombreira.svg",
+    "instrucoes": [
+      "De pé numa porta, antebraço apoiado na ombreira, cotovelo à altura do ombro e dobrado a 90 graus.",
+      "Dá um passo pequeno em frente com o pé do mesmo lado e roda o tronco para o lado oposto.",
+      "Sente a abertura no peito e na frente do ombro."
+    ],
+    "pistas": ["ombros para baixo, longe das orelhas", "não deixes o ombro ir à frente"],
+    "evitar_se": ["instabilidade ou luxação recente do ombro"]
+  },
+  {
+    "id": "dorsal-crianca",
+    "nome": "Dorsal, posição da criança",
+    "categoria": "alongamento",
+    "tipo": "tempo",
+    "duracao_s": 40,
+    "bilateral": false,
+    "alvo": ["grande dorsal", "lombar"],
+    "posicao": "ajoelhado",
+    "imagem": "img/dorsal-crianca.svg",
+    "instrucoes": [
+      "De joelhos, senta-te sobre os calcanhares e leva o tronco à frente.",
+      "Estica os braços no chão, o mais longe que conseguires, testa apoiada.",
+      "Empurra a anca para trás, em direcção aos calcanhares, e deixa as costas alongarem."
+    ],
+    "pistas": ["respira para as costas", "afasta os joelhos se a anca precisar de espaço"],
+    "evitar_se": ["dor no joelho ao sentar sobre os calcanhares"]
+  },
+  {
+    "id": "trapezio-pescoco",
+    "nome": "Trapézio e pescoço, inclinação lateral",
+    "categoria": "alongamento",
+    "tipo": "tempo",
+    "duracao_s": 25,
+    "bilateral": true,
+    "alvo": ["trapézio superior", "pescoço"],
+    "posicao": "sentado",
+    "imagem": "img/trapezio-pescoco.svg",
+    "instrucoes": [
+      "Sentado ou de pé, costas direitas, ombros relaxados.",
+      "Inclina a cabeça para um lado, orelha em direcção ao ombro, sem rodar.",
+      "A mão desse lado pode pousar suavemente na cabeça. Sem puxar. O outro braço fica a pender."
+    ],
+    "pistas": ["ombro oposto para baixo", "peso da mão, não força"],
+    "evitar_se": ["tonturas", "dor cervical com formigueiro nos braços"]
+  },
+  {
+    "id": "lombar-joelhos-peito",
+    "nome": "Lombar, joelhos ao peito",
+    "categoria": "alongamento",
+    "tipo": "tempo",
+    "duracao_s": 40,
+    "bilateral": false,
+    "alvo": ["lombar", "glúteos"],
+    "posicao": "deitado",
+    "imagem": "img/lombar-joelhos-peito.svg",
+    "instrucoes": [
+      "Deitado de costas, traz os dois joelhos ao peito.",
+      "Abraça as pernas por trás dos joelhos e puxa com suavidade.",
+      "Cabeça no chão. Deixa a lombar encostar ao chão e respira fundo."
+    ],
+    "pistas": ["cabeça e ombros relaxados no chão", "balança ligeiramente se souber bem"],
+    "evitar_se": ["hérnia discal com dor aguda"]
+  },
+  {
+    "id": "rotacao-toracica-deitado",
+    "nome": "Rotação torácica, deitado",
+    "categoria": "alongamento",
+    "tipo": "tempo",
+    "duracao_s": 30,
+    "bilateral": true,
+    "alvo": ["coluna torácica", "peitoral"],
+    "posicao": "deitado",
+    "imagem": "img/rotacao-toracica-deitado.svg",
+    "instrucoes": [
+      "Deitado de lado, joelhos dobrados a 90 graus, braços esticados à frente, mãos juntas.",
+      "Abre o braço de cima num arco por cima do corpo, seguindo a mão com os olhos.",
+      "Deixa o ombro de cima ir em direcção ao chão. Os joelhos ficam juntos e no sítio."
+    ],
+    "pistas": ["joelhos colados um ao outro", "segue a mão com o olhar"],
+    "evitar_se": ["dor aguda na coluna"]
+  },
+  {
+    "id": "tornozelos-circulos",
+    "nome": "Tornozelos, círculos",
+    "categoria": "alongamento",
+    "tipo": "tempo",
+    "duracao_s": 20,
+    "bilateral": true,
+    "alvo": ["tornozelo"],
+    "posicao": "sentado",
+    "imagem": "img/tornozelos-circulos.svg",
+    "instrucoes": [
+      "Sentado, com uma perna esticada ou apoiada sobre a outra.",
+      "Desenha círculos grandes e lentos com o pé, só a partir do tornozelo.",
+      "Metade do tempo num sentido, metade no outro."
+    ],
+    "pistas": ["círculos lentos e amplos", "a perna não se mexe, só o pé"],
+    "evitar_se": ["entorse recente"]
+  },
+  {
+    "id": "punhos-extensao",
+    "nome": "Punhos, extensão",
+    "categoria": "alongamento",
+    "tipo": "tempo",
+    "duracao_s": 20,
+    "bilateral": true,
+    "alvo": ["flexores do antebraço", "punho"],
+    "posicao": "de pé",
+    "imagem": "img/punhos-extensao.svg",
+    "instrucoes": [
+      "Estica um braço à frente, palma virada para cima.",
+      "Com a outra mão, puxa os dedos suavemente para baixo e para ti.",
+      "Sente a tensão na parte de dentro do antebraço."
+    ],
+    "pistas": ["cotovelo esticado", "puxa os dedos, não só a palma"],
+    "evitar_se": ["síndrome do túnel cárpico com dor aguda"]
+  }
+]
