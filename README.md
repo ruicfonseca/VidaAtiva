@@ -4,7 +4,8 @@ Aplicação de exercícios para telemóvel. Começa pelos alongamentos; mobilida
 
 - PWA sem framework, sem build e sem dependências. HTML, CSS e JavaScript em módulos.
 - Funciona offline depois da primeira visita. Dados guardados no browser.
-- Doze alongamentos com ilustração, três rotinas prontas, reprodutor com temporizador, pistas faladas, vibração, ecrã sempre ligado e histórico de sessões.
+- Dezanove alongamentos com ilustração, doze sem material e sete com elástico de resistência. Quatro rotinas prontas, reprodutor com temporizador, pistas faladas, vibração, ecrã sempre ligado e histórico de sessões.
+- Catálogo com filtro por material (sem material, com elástico).
 - Plano e decisões de desenho em [PLANO.md](PLANO.md).
 
 ## Correr localmente
@@ -19,11 +20,20 @@ Depois abrir http://localhost:8080. Para testar no telemóvel na mesma rede, usa
 
 ## Instalar no telemóvel
 
-1. No GitHub, em Settings, Pages, escolher "Deploy from a branch", branch `main`, pasta `/ (root)`.
-2. Abrir `https://ruicfonseca.github.io/VidaAtiva/` no telemóvel.
-3. Android (Chrome): menu, "Adicionar ao ecrã principal". iPhone (Safari): partilhar, "Adicionar ao ecrã principal".
+Cada push para `main` corre os testes e publica em GitHub Pages através de `.github/workflows/pages.yml` (fonte do Pages: GitHub Actions).
+
+1. Abrir `https://ruicfonseca.github.io/VidaAtiva/` no telemóvel.
+2. Android (Chrome): menu, "Adicionar ao ecrã principal". iPhone (Safari): partilhar, "Adicionar ao ecrã principal".
 
 A partir daí abre como app, funciona sem rede e mantém o ecrã ligado durante a sessão.
+
+## Ilustrações
+
+Cada pose está descrita como uma lista de segmentos em `ferramentas/gerar_ilustracoes.py`. A zona alongada vai em `alvo` (cor de acento com halo), o elástico em `elastico`, as setas em `seta` ou `arco`. Depois de alterar:
+
+```sh
+python3 ferramentas/gerar_ilustracoes.py
+```
 
 ## Testes
 
@@ -52,7 +62,8 @@ js/catalogo.js        carregamento de dados e ilustrações
 js/util.js            template HTML com escape, formatação
 data/exercicios.json  catálogo
 data/rotinas.json     rotinas
-img/*.svg             ilustrações (traço, cor herdada do tema)
+img/*.svg             ilustrações geradas, não editar à mão
+ferramentas/gerar_ilustracoes.py  poses como dados; gera img/*.svg
 test/                 node --test
 ```
 

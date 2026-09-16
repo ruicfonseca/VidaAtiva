@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Visto de costas: elástico seguro atrás das costas, braços esticados a afastar">
+<line class="chao" stroke-width="3" x1="12" y1="176" x2="188" y2="176"/>
+<polyline class="halo" stroke-width="28" points="62,96 44,160"/>
+<polyline class="halo" stroke-width="28" points="138,96 156,160"/>
+<polyline class="tronco" stroke-width="14" points="100,178 100,96"/>
+<polyline class="corpo" stroke-width="11" points="62,96 138,96"/>
+<polyline class="corpo" stroke-width="11" points="100,96 100,88"/>
+<polyline class="alvo" stroke-width="12" points="62,96 44,160"/>
+<polyline class="alvo" stroke-width="12" points="138,96 156,160"/>
+<path class="elastico" stroke-width="5" d="M44 160 Q100 150 156 160"/>
+<circle class="cabeca" cx="100" cy="72" r="14" fill="currentColor" stroke="none"/>
+<line class="seta" stroke-width="3.5" x1="34" y1="150" x2="28" y2="128"/>
+<polyline class="seta" stroke-width="3.5" points="34.3922,134.336 28,128 25.7094,136.704"/>
+<line class="seta" stroke-width="3.5" x1="166" y1="150" x2="172" y2="128"/>
+<polyline class="seta" stroke-width="3.5" points="174.291,136.704 172,128 165.608,134.336"/>
+<text class="legenda" x="100" y="194" font-size="11" fill="currentColor" stroke="none" text-anchor="middle" font-family="system-ui, sans-serif">visto de costas</text>
+</svg>

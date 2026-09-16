@@ -9,7 +9,10 @@ const rotinas = JSON.parse(readFileSync(new URL('../data/rotinas.json', import.m
 
 test('todas as rotinas referem exercícios existentes e têm imagem', () => {
   for (const r of rotinas) assert.doesNotThrow(() => expandirRotina(r, exercicios), r.id);
-  for (const e of exercicios) assert.ok(e.imagem?.startsWith('img/'), e.id);
+  for (const e of exercicios) {
+    assert.ok(e.imagem?.startsWith('img/'), e.id);
+    assert.ok(Array.isArray(e.equipamento), `${e.id} sem lista de equipamento`);
+  }
 });
 
 test('bilateral gera esquerdo e direito com descanso entre passos', () => {

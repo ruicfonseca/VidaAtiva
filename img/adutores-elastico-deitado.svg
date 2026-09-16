@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Visto de cima: deitado de costas, elástico no pé, perna aberta para o lado">
+<polyline class="halo" stroke-width="28" points="112,100 148,62 176,32"/>
+<polyline class="tronco" stroke-width="14" points="46,100 112,100"/>
+<polyline class="corpo" stroke-width="11" points="112,100 150,100 188,100"/>
+<polyline class="corpo" stroke-width="11" points="50,100 58,64"/>
+<polyline class="corpo" stroke-width="11" points="50,100 52,150"/>
+<polyline class="alvo" stroke-width="12" points="112,100 148,62 176,32"/>
+<polyline class="elastico" stroke-width="5" points="58,62 174,30"/>
+<circle class="cabeca" cx="28" cy="100" r="13" fill="currentColor" stroke="none"/>
+<line class="seta" stroke-width="3.5" x1="150" y1="92" x2="170" y2="66"/>
+<polyline class="seta" stroke-width="3.5" points="168.815,74.9216 170,66 161.681,69.4342"/>
+<text class="legenda" x="100" y="192" font-size="11" fill="currentColor" stroke="none" text-anchor="middle" font-family="system-ui, sans-serif">visto de cima</text>
+</svg>

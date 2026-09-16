@@ -1,9 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Sentado, perna esticada, tronco inclinado para o pé">
-<line class="chao" x1="15" y1="150" x2="185" y2="150" stroke-width="3"/>
-<circle cx="129" cy="81" r="12"/>
-<path d="M80 145 L118 95"/>
-<path d="M118 95 L160 140"/>
-<path d="M80 145 L55 120 L95 148"/>
-<path class="alvo" stroke-width="8" d="M80 145 L125 148 L165 146"/>
-<path d="M165 146 L168 130"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Sentado, perna esticada, tronco inclinado para o pé">
+<line class="chao" stroke-width="3" x1="12" y1="176" x2="188" y2="176"/>
+<polyline class="halo" stroke-width="28" points="74,168 120,170 162,168"/>
+<polyline class="tronco" stroke-width="14" points="74,168 116,110"/>
+<polyline class="corpo" stroke-width="11" points="116,110 138,138 158,158"/>
+<polyline class="corpo" stroke-width="11" points="74,168 46,140 88,172"/>
+<polyline class="corpo" stroke-width="11" points="162,168 166,150"/>
+<polyline class="alvo" stroke-width="12" points="74,168 120,170 162,168"/>
+<circle class="cabeca" cx="130" cy="94" r="13" fill="currentColor" stroke="none"/>
+<line class="seta" stroke-width="3.5" x1="152" y1="100" x2="176" y2="128"/>
+<polyline class="seta" stroke-width="3.5" points="167.511,125.011 176,128 174.344,119.154"/>
 </svg>

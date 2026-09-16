@@ -5,14 +5,30 @@
     "descricao": "Acordar o corpo todo, dos tornozelos ao pescoço. Feito no chão, ao lado da cama.",
     "descanso_s": 5,
     "passos": [
-      { "exercicio": "tornozelos-circulos" },
-      { "exercicio": "lombar-joelhos-peito" },
-      { "exercicio": "gluteos-figura4" },
-      { "exercicio": "rotacao-toracica-deitado" },
-      { "exercicio": "isquiotibiais-sentado" },
-      { "exercicio": "dorsal-crianca" },
-      { "exercicio": "flexores-anca-ajoelhado" },
-      { "exercicio": "trapezio-pescoco" }
+      {
+        "exercicio": "tornozelos-circulos"
+      },
+      {
+        "exercicio": "lombar-joelhos-peito"
+      },
+      {
+        "exercicio": "gluteos-figura4"
+      },
+      {
+        "exercicio": "rotacao-toracica-deitado"
+      },
+      {
+        "exercicio": "isquiotibiais-sentado"
+      },
+      {
+        "exercicio": "dorsal-crianca"
+      },
+      {
+        "exercicio": "flexores-anca-ajoelhado"
+      },
+      {
+        "exercicio": "trapezio-pescoco"
+      }
     ]
   },
   {
@@ -21,12 +37,25 @@
     "descricao": "Pernas e anca depois de correr ou de treino de força. Com o corpo ainda quente.",
     "descanso_s": 5,
     "passos": [
-      { "exercicio": "gemeos-parede" },
-      { "exercicio": "quadricipite-pe" },
-      { "exercicio": "isquiotibiais-sentado" },
-      { "exercicio": "flexores-anca-ajoelhado" },
-      { "exercicio": "gluteos-figura4" },
-      { "exercicio": "peitoral-ombreira", "duracao_s": 25 }
+      {
+        "exercicio": "gemeos-parede"
+      },
+      {
+        "exercicio": "quadricipite-pe"
+      },
+      {
+        "exercicio": "isquiotibiais-sentado"
+      },
+      {
+        "exercicio": "flexores-anca-ajoelhado"
+      },
+      {
+        "exercicio": "gluteos-figura4"
+      },
+      {
+        "exercicio": "peitoral-ombreira",
+        "duracao_s": 25
+      }
     ]
   },
   {
@@ -35,11 +64,52 @@
     "descricao": "Pescoço, ombros, peito e punhos. Tudo de pé ou sentado, sem ir ao chão.",
     "descanso_s": 3,
     "passos": [
-      { "exercicio": "trapezio-pescoco" },
-      { "exercicio": "peitoral-ombreira" },
-      { "exercicio": "punhos-extensao" },
-      { "exercicio": "quadricipite-pe", "duracao_s": 20 },
-      { "exercicio": "gemeos-parede", "duracao_s": 20 }
+      {
+        "exercicio": "trapezio-pescoco"
+      },
+      {
+        "exercicio": "peitoral-ombreira"
+      },
+      {
+        "exercicio": "punhos-extensao"
+      },
+      {
+        "exercicio": "quadricipite-pe",
+        "duracao_s": 20
+      },
+      {
+        "exercicio": "gemeos-parede",
+        "duracao_s": 20
+      }
+    ]
+  },
+  {
+    "id": "elastico-10",
+    "nome": "Elástico, 10 minutos",
+    "descricao": "Pernas, anca, costas e ombros com elástico. Precisas de um elástico de resistência e de um ponto alto para o prender.",
+    "descanso_s": 5,
+    "passos": [
+      {
+        "exercicio": "isquiotibiais-elastico-deitado"
+      },
+      {
+        "exercicio": "adutores-elastico-deitado"
+      },
+      {
+        "exercicio": "quadricipite-elastico-brucos"
+      },
+      {
+        "exercicio": "gemeos-elastico-sentado"
+      },
+      {
+        "exercicio": "dorsal-elastico-ancorado"
+      },
+      {
+        "exercicio": "peitoral-elastico-costas"
+      },
+      {
+        "exercicio": "ombros-passagem-elastico"
+      }
     ]
   }
 ]

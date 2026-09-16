@@ -1,10 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Visto de cima: deitado de lado, joelhos dobrados, braço de cima aberto num arco">
-<circle cx="30" cy="100" r="12"/>
-<path d="M45 100 L110 100"/>
-<path d="M110 100 L140 125 L115 152"/>
-<path d="M112 106 L142 131 L118 158"/>
-<path d="M48 100 L52 152"/>
-<path class="alvo" stroke-width="8" d="M48 100 L44 48"/>
-<path class="apoio" stroke-width="3" stroke-dasharray="6 8" d="M56 150 A52 52 0 0 1 48 48"/>
-<path class="apoio" stroke-width="3" d="M40 58 L48 46 L58 54"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Visto de cima: deitado de lado, joelhos dobrados, braço de cima aberto num arco">
+<polyline class="halo" stroke-width="28" points="50,100 46,44"/>
+<polyline class="tronco" stroke-width="14" points="46,100 112,100"/>
+<polyline class="corpo" stroke-width="11" points="112,100 142,128 116,156"/>
+<polyline class="corpo" stroke-width="11" points="114,106 146,136 120,164"/>
+<polyline class="corpo" stroke-width="11" points="50,100 54,152"/>
+<polyline class="alvo" stroke-width="12" points="50,100 46,44"/>
+<circle class="cabeca" cx="28" cy="100" r="13" fill="currentColor" stroke="none"/>
+<path class="seta" stroke-width="3.5" stroke-dasharray="7 7" d="M62 152 A56 56 0 0 1 48 46"/>
+<polyline class="seta" stroke-width="3.5" points="46.3442,54.8464 48,46 39.5109,48.9893"/>
+<text class="legenda" x="100" y="192" font-size="11" fill="currentColor" stroke="none" text-anchor="middle" font-family="system-ui, sans-serif">visto de cima</text>
 </svg>

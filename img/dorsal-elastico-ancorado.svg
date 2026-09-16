@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Ajoelhado, elástico preso em cima, braço esticado, anca a ir para trás">
+<line class="chao" stroke-width="3" x1="12" y1="176" x2="188" y2="176"/>
+<polyline class="apoio" stroke-width="4" points="24,20 24,176"/>
+<polyline class="halo" stroke-width="28" points="104,84 46,80"/>
+<polyline class="tronco" stroke-width="14" points="140,142 104,84"/>
+<polyline class="corpo" stroke-width="11" points="110,176 160,176 168,166"/>
+<polyline class="corpo" stroke-width="11" points="110,176 140,142"/>
+<polyline class="corpo" stroke-width="11" points="104,84 78,112 80,148"/>
+<polyline class="alvo" stroke-width="12" points="104,84 46,80"/>
+<polyline class="elastico" stroke-width="5" points="24,56 46,80"/>
+<circle class="cabeca" cx="92" cy="62" r="13" fill="currentColor" stroke="none"/>
+<line class="seta" stroke-width="3.5" x1="150" y1="118" x2="168" y2="132"/>
+<polyline class="seta" stroke-width="3.5" points="159.085,130.767 168,132 164.61,123.663"/>
+</svg>

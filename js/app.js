@@ -8,6 +8,14 @@ const raiz = document.getElementById('app');
 let catalogo = null;
 let reprodutorActivo = null;
 let ultimoRegisto = null;
+let filtroEquipamento = 'todos'; // 'todos' | 'nenhum' | 'elástico'
+
+function equipamentoDaRotina(rot) {
+  return [...new Set(rot.passos.flatMap((p) => catalogo.porId.get(p.exercicio)?.equipamento ?? []))];
+}
+function distintivosEquipamento(lista) {
+  return lista.map((e) => html`<span class="etiqueta etiqueta--equip">${e}</span>`).join('');
+}
 
 const rotas = {
   '': ecraInicio,
@@ -60,7 +68,7 @@ function ecraInicio() {
           <div class="cartao__texto">
             <h3>${rot.nome}</h3>
             <p>${rot.descricao}</p>
-            <p class="cartao__meta">${contarExercicios(passos)} exercícios · ${formatarTempo(duracaoTotalS(passos))}</p>
+            <p class="cartao__meta">${contarExercicios(passos)} exercícios · ${formatarTempo(duracaoTotalS(passos))} ${bruto(distintivosEquipamento(equipamentoDaRotina(rot)))}</p>
           </div>
           <span class="cartao__seta">›</span>
         </a></li>`;
@@ -75,7 +83,7 @@ function ecraRotina(id) {
   return html`
     ${bruto(cabecalho(rot.nome))}
     <p class="intro">${rot.descricao}</p>
-    <p class="intro cartao__meta">${contarExercicios(passos)} exercícios · ${formatarTempo(duracaoTotalS(passos))} · ${rot.descanso_s} s de descanso entre passos</p>
+    <p class="intro cartao__meta">${contarExercicios(passos)} exercícios · ${formatarTempo(duracaoTotalS(passos))} · ${rot.descanso_s} s de descanso entre passos ${bruto(distintivosEquipamento(equipamentoDaRotina(rot)))}</p>
     <ol class="lista lista--passos">
       ${bruto(rot.passos.map((p) => {
         const ex = catalogo.porId.get(p.exercicio);
@@ -123,13 +131,22 @@ function ecraFim() {
 }
 
 function ecraExercicios() {
+  const filtros = [['todos', 'Todos'], ['nenhum', 'Sem material'], ['elástico', 'Com elástico']];
+  const lista = catalogo.exercicios.filter((ex) => {
+    if (filtroEquipamento === 'todos') return true;
+    if (filtroEquipamento === 'nenhum') return ex.equipamento.length === 0;
+    return ex.equipamento.includes(filtroEquipamento);
+  });
   return html`
     ${bruto(cabecalho('Exercícios'))}
+    <div class="filtros" role="tablist">
+      ${bruto(filtros.map(([v, n]) => html`<button class="filtro ${v === filtroEquipamento ? 'filtro--activo' : ''}" data-filtro="${v}" role="tab" aria-selected="${v === filtroEquipamento}">${n}</button>`).join(''))}
+    </div>
     <ul class="grelha">
-      ${bruto(catalogo.exercicios.map((ex) => html`<li><a class="azulejo" href="#/exercicio/${ex.id}">
+      ${bruto(lista.map((ex) => html`<li><a class="azulejo" href="#/exercicio/${ex.id}">
         <div class="ilustracao ilustracao--media" data-imagem="${ex.imagem}"></div>
         <strong>${ex.nome}</strong>
-        <span class="cartao__meta">${ex.duracao_s} s${ex.bilateral ? ' por lado' : ''}</span>
+        <span class="cartao__meta">${ex.duracao_s} s${ex.bilateral ? ' por lado' : ''} ${bruto(distintivosEquipamento(ex.equipamento))}</span>
       </a></li>`).join(''))}
     </ul>`;
 }
@@ -140,7 +157,7 @@ function ecraExercicio(id) {
   return html`
     ${bruto(cabecalho(ex.nome, '#/exercicios'))}
     <div class="ilustracao ilustracao--grande" data-imagem="${ex.imagem}"></div>
-    <p class="etiquetas">${bruto(ex.alvo.map((a) => html`<span class="etiqueta">${a}</span>`).join(''))} <span class="etiqueta etiqueta--suave">${ex.posicao}</span> <span class="etiqueta etiqueta--suave">${ex.duracao_s} s${ex.bilateral ? ' por lado' : ''}</span></p>
+    <p class="etiquetas">${bruto(ex.alvo.map((a) => html`<span class="etiqueta">${a}</span>`).join(''))} <span class="etiqueta etiqueta--suave">${ex.posicao}</span> <span class="etiqueta etiqueta--suave">${ex.duracao_s} s${ex.bilateral ? ' por lado' : ''}</span> ${bruto(distintivosEquipamento(ex.equipamento))}</p>
     <h2 class="seccao">Como fazer</h2>
     <ol class="instrucoes">${bruto(ex.instrucoes.map((i) => html`<li>${i}</li>`).join(''))}</ol>
     <h2 class="seccao">Pistas</h2>
@@ -164,6 +181,11 @@ function ecraHistorico() {
       </li>`).join(''))}
     </ul>`;
 }
+
+raiz.addEventListener('click', (ev) => {
+  const filtro = ev.target.closest('[data-filtro]')?.dataset.filtro;
+  if (filtro) { filtroEquipamento = filtro; navegar(); }
+});
 
 window.addEventListener('hashchange', navegar);
 navegar();

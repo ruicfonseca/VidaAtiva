@@ -1,9 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Ajoelhado num joelho, outro pé à frente, anca avançada">
-<line class="chao" x1="15" y1="150" x2="185" y2="150" stroke-width="3"/>
-<circle cx="99" cy="34" r="12"/>
-<path d="M95 95 L98 50"/>
-<path d="M98 50 L90 75 L70 100"/>
-<path d="M95 95 L62 100 L62 150 L48 150"/>
-<path class="alvo" stroke-width="8" d="M95 95 L125 150"/>
-<path d="M125 150 L162 150 L168 140"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Ajoelhado num joelho, outro pé à frente, anca avançada">
+<line class="chao" stroke-width="3" x1="12" y1="176" x2="188" y2="176"/>
+<polyline class="halo" stroke-width="28" points="98,106 128,176"/>
+<polyline class="tronco" stroke-width="14" points="98,106 102,52"/>
+<polyline class="corpo" stroke-width="11" points="102,52 90,82 68,108"/>
+<polyline class="corpo" stroke-width="11" points="98,106 60,112 60,176 44,176"/>
+<polyline class="corpo" stroke-width="11" points="128,176 170,176 176,166"/>
+<polyline class="alvo" stroke-width="12" points="98,106 128,176"/>
+<circle class="cabeca" cx="103" cy="32" r="13" fill="currentColor" stroke="none"/>
+<line class="seta" stroke-width="3.5" x1="140" y1="96" x2="118" y2="96"/>
+<polyline class="seta" stroke-width="3.5" points="125.794,91.5 118,96 125.794,100.5"/>
 </svg>

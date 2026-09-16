@@ -8,6 +8,7 @@
   --acento-texto: #1a1207;
   --ok: #6fcf97;
   --aviso: #e07a5f;
+  --elastico: #5ec8c0;
   --raio: 16px;
   --gutter: 16px;
   color-scheme: dark;
@@ -68,7 +69,11 @@ h1, h2, h3, p { margin: 0; }
 .ilustracao { display: flex; align-items: center; justify-content: center; color: var(--texto); }
 .ilustracao svg { width: 100%; height: 100%; display: block; }
 .ilustracao .alvo { stroke: var(--acento); }
+.ilustracao .halo { stroke: var(--acento); opacity: 0.22; }
+.ilustracao .seta { stroke: var(--acento); }
+.ilustracao .elastico { stroke: var(--elastico); }
 .ilustracao .chao, .ilustracao .apoio { stroke: var(--texto-suave); opacity: 0.6; }
+.ilustracao .legenda { fill: var(--texto-suave); }
 .ilustracao--mini { width: 56px; height: 56px; flex: none; background: var(--superficie); border-radius: 12px; }
 .ilustracao--media { width: 100%; aspect-ratio: 1; background: var(--superficie-2); border-radius: 12px; }
 .ilustracao--grande { width: 100%; max-width: 100%; aspect-ratio: 1; max-height: 34vh; background: var(--superficie); border-radius: var(--raio); margin: 8px auto 0; }
@@ -77,6 +82,10 @@ h1, h2, h3, p { margin: 0; }
 .etiquetas { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
 .etiqueta { display: inline-block; padding: 4px 10px; border-radius: 999px; background: var(--acento); color: var(--acento-texto); font-size: 0.85rem; font-weight: 600; }
 .etiqueta--suave { background: var(--superficie-2); color: var(--texto); font-weight: 500; }
+.etiqueta--equip { background: transparent; color: var(--elastico); border: 1.5px solid var(--elastico); padding: 1px 8px; font-size: 0.8rem; vertical-align: middle; }
+.filtros { display: flex; gap: 8px; margin: 4px 0 14px; overflow-x: auto; }
+.filtro { flex: none; min-height: 40px; padding: 0 14px; border: 1.5px solid var(--superficie-2); border-radius: 999px; background: transparent; color: var(--texto-suave); font: inherit; font-weight: 600; cursor: pointer; }
+.filtro--activo { background: var(--texto); color: var(--fundo); border-color: var(--texto); }
 .instrucoes { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 8px; }
 
 /* Reprodutor */

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Deitado de bruços, elástico no tornozelo, calcanhar puxado ao glúteo">
+<line class="chao" stroke-width="3" x1="12" y1="176" x2="188" y2="176"/>
+<polyline class="halo" stroke-width="28" points="108,168 150,168"/>
+<polyline class="tronco" stroke-width="14" points="44,168 108,168"/>
+<polyline class="corpo" stroke-width="11" points="108,168 150,168 186,168"/>
+<polyline class="corpo" stroke-width="11" points="150,168 142,120 130,112"/>
+<polyline class="corpo" stroke-width="11" points="44,168 56,136 62,110"/>
+<polyline class="alvo" stroke-width="12" points="108,168 150,168"/>
+<path class="elastico" stroke-width="5" d="M140 118 Q100 92 64 108"/>
+<circle class="cabeca" cx="26" cy="166" r="13" fill="currentColor" stroke="none"/>
+<line class="seta" stroke-width="3.5" x1="170" y1="132" x2="156" y2="112"/>
+<polyline class="seta" stroke-width="3.5" points="164.156,115.805 156,112 156.783,120.966"/>
+</svg>
