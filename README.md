@@ -4,7 +4,7 @@ Aplicação de exercícios para telemóvel. Começa pelos alongamentos; mobilida
 
 - PWA sem framework, sem build e sem dependências. HTML, CSS e JavaScript em módulos.
 - Funciona offline depois da primeira visita. Dados guardados no browser.
-- Dezanove alongamentos com ilustração, doze sem material e sete com elástico de resistência. Quatro rotinas prontas, reprodutor com temporizador, pistas faladas, vibração, ecrã sempre ligado e histórico de sessões.
+- Vinte e cinco exercícios com ilustração ou fotografia: alongamentos sem material, com elástico de resistência, e mobilidade e controlo da coluna lombar. Cinco rotinas prontas, reprodutor com temporizador ou contagem de repetições, pistas faladas, vibração, ecrã sempre ligado e histórico de sessões.
 - Catálogo com filtro por material (sem material, com elástico).
 - Plano e decisões de desenho em [PLANO.md](PLANO.md).
 
@@ -27,7 +27,11 @@ Cada push para `main` corre os testes e publica em GitHub Pages através de `.gi
 
 A partir daí abre como app, funciona sem rede e mantém o ecrã ligado durante a sessão.
 
-## Ilustrações
+## Imagens
+
+Um exercício pode ter `imagem` em SVG (ilustração gerada) ou em JPEG, PNG ou WebP (fotografia). As fotografias em `img/fotos/` vêm de um plano de exercício entregue ao utilizador por um terceiro; se for preciso retirá-las, basta apagar a pasta e voltar a apontar `imagem` para o SVG correspondente.
+
+### Ilustrações geradas
 
 Cada pose está descrita como uma lista de segmentos em `ferramentas/gerar_ilustracoes.py`. A zona alongada vai em `alvo` (cor de acento com halo), o elástico em `elastico`, as setas em `seta` ou `arco`. Depois de alterar:
 
@@ -63,10 +67,11 @@ js/util.js            template HTML com escape, formatação
 data/exercicios.json  catálogo
 data/rotinas.json     rotinas
 img/*.svg             ilustrações geradas, não editar à mão
+img/fotos/*.jpg       fotografias recortadas do plano de exercício da coluna lombar entregue ao utilizador
 ferramentas/gerar_ilustracoes.py  poses como dados; gera img/*.svg
 test/                 node --test
 ```
 
 ## Estado
 
-v0 feita. Próximo: v1 (editor de rotinas, exportar e importar JSON, definições). Ver [PLANO.md](PLANO.md).
+v0 feita, com exercícios por repetições e fotografias já suportados. Próximo: v1 (descanso maior ao mudar de posição, contagem de preparação, exportar e importar JSON, definições, editor de rotinas). Ver [PLANO.md](PLANO.md).

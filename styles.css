@@ -29,6 +29,7 @@ h1, h2, h3, p { margin: 0; }
 .seccao { font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--texto-suave); margin: 24px 0 10px; }
 .seccao--aviso { color: var(--aviso); }
 .intro { color: var(--texto-suave); margin: 4px 0 12px; }
+.aviso { border-left: 3px solid var(--aviso); padding: 8px 12px; margin: 0 0 14px; color: var(--texto); background: var(--superficie); border-radius: 0 12px 12px 0; font-size: 0.95rem; }
 
 /* Botões: alvos de toque grandes */
 .botao { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; min-width: 52px; padding: 0 20px; border: 0; border-radius: var(--raio); background: var(--superficie-2); color: var(--texto); font: inherit; font-weight: 600; cursor: pointer; -webkit-tap-highlight-color: transparent; }
@@ -74,6 +75,13 @@ h1, h2, h3, p { margin: 0; }
 .ilustracao .elastico { stroke: var(--elastico); }
 .ilustracao .chao, .ilustracao .apoio { stroke: var(--texto-suave); opacity: 0.6; }
 .ilustracao .legenda { fill: var(--texto-suave); }
+.ilustracao--foto { overflow: hidden; }
+.ilustracao--foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* Fotos largas: a caixa adapta-se à foto em vez de a cortar; miniaturas continuam quadradas. */
+.ilustracao--foto:not(.ilustracao--mini) { aspect-ratio: auto; max-height: none; }
+.ilustracao--foto:not(.ilustracao--mini) img { height: auto; object-fit: contain; }
+.reprodutor--repeticoes .reprodutor__tempo { font-size: clamp(72px, 22vw, 110px); }
+.reprodutor--repeticoes [data-accao="pausa"] { border-radius: 999px; min-width: 132px; font-size: 1.25rem; }
 .ilustracao--mini { width: 56px; height: 56px; flex: none; background: var(--superficie); border-radius: 12px; }
 .ilustracao--media { width: 100%; aspect-ratio: 1; background: var(--superficie-2); border-radius: 12px; }
 .ilustracao--grande { width: 100%; max-width: 100%; aspect-ratio: 1; max-height: 34vh; background: var(--superficie); border-radius: var(--raio); margin: 8px auto 0; }

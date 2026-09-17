@@ -83,13 +83,14 @@ function ecraRotina(id) {
   return html`
     ${bruto(cabecalho(rot.nome))}
     <p class="intro">${rot.descricao}</p>
+    ${rot.aviso ? bruto(html`<p class="aviso">${rot.aviso}</p>`) : ''}
     <p class="intro cartao__meta">${contarExercicios(passos)} exercícios · ${formatarTempo(duracaoTotalS(passos))} · ${rot.descanso_s} s de descanso entre passos ${bruto(distintivosEquipamento(equipamentoDaRotina(rot)))}</p>
     <ol class="lista lista--passos">
       ${bruto(rot.passos.map((p) => {
         const ex = catalogo.porId.get(p.exercicio);
         return html`<li class="passo">
           <div class="ilustracao ilustracao--mini" data-imagem="${ex.imagem}"></div>
-          <div class="passo__texto"><strong>${ex.nome}</strong><span>${p.duracao_s ?? ex.duracao_s} s${ex.bilateral ? ' por lado' : ''}</span></div>
+          <div class="passo__texto"><strong>${ex.nome}</strong><span>${ex.tipo === 'repeticoes' ? `${p.repeticoes ?? ex.repeticoes} repetições${ex.manter_s ? `, manter ${ex.manter_s} s` : ''}` : `${p.duracao_s ?? ex.duracao_s} s`}${ex.bilateral ? ' por lado' : ''}</span></div>
         </li>`;
       }).join(''))}
     </ol>
@@ -146,7 +147,7 @@ function ecraExercicios() {
       ${bruto(lista.map((ex) => html`<li><a class="azulejo" href="#/exercicio/${ex.id}">
         <div class="ilustracao ilustracao--media" data-imagem="${ex.imagem}"></div>
         <strong>${ex.nome}</strong>
-        <span class="cartao__meta">${ex.duracao_s} s${ex.bilateral ? ' por lado' : ''} ${bruto(distintivosEquipamento(ex.equipamento))}</span>
+        <span class="cartao__meta">${ex.tipo === 'repeticoes' ? `${ex.repeticoes} rep.` : `${ex.duracao_s} s`}${ex.bilateral ? ' por lado' : ''} ${bruto(distintivosEquipamento(ex.equipamento))}</span>
       </a></li>`).join(''))}
     </ul>`;
 }
@@ -157,7 +158,7 @@ function ecraExercicio(id) {
   return html`
     ${bruto(cabecalho(ex.nome, '#/exercicios'))}
     <div class="ilustracao ilustracao--grande" data-imagem="${ex.imagem}"></div>
-    <p class="etiquetas">${bruto(ex.alvo.map((a) => html`<span class="etiqueta">${a}</span>`).join(''))} <span class="etiqueta etiqueta--suave">${ex.posicao}</span> <span class="etiqueta etiqueta--suave">${ex.duracao_s} s${ex.bilateral ? ' por lado' : ''}</span> ${bruto(distintivosEquipamento(ex.equipamento))}</p>
+    <p class="etiquetas">${bruto(ex.alvo.map((a) => html`<span class="etiqueta">${a}</span>`).join(''))} <span class="etiqueta etiqueta--suave">${ex.posicao}</span> <span class="etiqueta etiqueta--suave">${ex.tipo === 'repeticoes' ? `${ex.repeticoes} repetições${ex.manter_s ? `, manter ${ex.manter_s} s` : ''}` : `${ex.duracao_s} s`}${ex.bilateral ? ' por lado' : ''}</span> ${bruto(distintivosEquipamento(ex.equipamento))}</p>
     <h2 class="seccao">Como fazer</h2>
     <ol class="instrucoes">${bruto(ex.instrucoes.map((i) => html`<li>${i}</li>`).join(''))}</ol>
     <h2 class="seccao">Pistas</h2>

@@ -1,6 +1,6 @@
 // Cache offline simples: guarda tudo o que a app pede na primeira visita e
 // serve da cache a partir daí, actualizando em segundo plano.
-const CACHE = 'vidaativa-v2';
+const CACHE = 'vidaativa-v3';
 const BASE = [
   './', 'index.html', 'styles.css', 'manifest.webmanifest',
   'js/app.js', 'js/catalogo.js', 'js/rotina.js', 'js/sessao.js', 'js/temporizador.js',

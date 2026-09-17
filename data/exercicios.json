@@ -119,7 +119,7 @@
     ],
     "posicao": "deitado",
     "equipamento": [],
-    "imagem": "img/gluteos-figura4.svg",
+    "imagem": "img/fotos/gluteos-figura4.jpg",
     "instrucoes": [
       "Deitado de costas, joelhos dobrados, pés no chão.",
       "Cruza o tornozelo de um lado sobre o joelho do outro.",
@@ -336,9 +336,9 @@
     "equipamento": [
       "elástico"
     ],
-    "imagem": "img/isquiotibiais-elastico-deitado.svg",
+    "imagem": "img/fotos/isquiotibiais-elastico-deitado.jpg",
     "instrucoes": [
-      "Deitado de costas, passa o elástico pela planta de um pé e segura as pontas com as duas mãos.",
+      "Deitado de costas, passa o elástico ou uma toalha pela planta de um pé e segura as pontas com as duas mãos.",
       "Estica essa perna para o tecto, joelho quase direito, e puxa o elástico até sentires a tensão atrás da coxa.",
       "A outra perna fica esticada no chão. A anca não sai do chão."
     ],
@@ -525,6 +525,173 @@
     ],
     "evitar_se": [
       "dor aguda no ombro"
+    ]
+  },
+  {
+    "id": "respiracao-diafragmatica",
+    "nome": "Respiração diafragmática",
+    "categoria": "alongamento",
+    "tipo": "tempo",
+    "duracao_s": 120,
+    "bilateral": false,
+    "alvo": [
+      "diafragma",
+      "lombar"
+    ],
+    "posicao": "deitado",
+    "equipamento": [],
+    "imagem": "img/fotos/respiracao-diafragmatica.jpg",
+    "instrucoes": [
+      "Deitado de costas, joelhos dobrados, pés no chão, mãos sobre o abdómen.",
+      "Inspira pelo nariz e deixa o abdómen subir, sem levantar o peito.",
+      "Expira pela boca, devagar, e deixa o abdómen descer. Respirações lentas e profundas."
+    ],
+    "pistas": [
+      "o abdómen sobe, o peito fica quieto",
+      "expira mais devagar do que inspiras"
+    ],
+    "evitar_se": [
+      "tonturas"
+    ]
+  },
+  {
+    "id": "bascula-pelvica",
+    "nome": "Mobilização lombar, báscula pélvica",
+    "categoria": "mobilidade",
+    "tipo": "repeticoes",
+    "repeticoes": 12,
+    "manter_s": 2,
+    "bilateral": false,
+    "alvo": [
+      "lombar",
+      "abdominal"
+    ],
+    "posicao": "deitado",
+    "equipamento": [],
+    "imagem": "img/fotos/bascula-pelvica.jpg",
+    "instrucoes": [
+      "Deitado de costas, joelhos dobrados, pés no chão.",
+      "Contrai ligeiramente o abdómen e bascula a bacia, pressionando a zona lombar contra o chão.",
+      "Mantém um instante e volta à posição neutra. Movimento pequeno, lento e controlado."
+    ],
+    "pistas": [
+      "movimento pequeno, sem forçar",
+      "respira normalmente"
+    ],
+    "evitar_se": [
+      "dor aguda a irradiar para a perna"
+    ]
+  },
+  {
+    "id": "joelho-peito-alternado",
+    "nome": "Joelho ao peito, alternado",
+    "categoria": "mobilidade",
+    "tipo": "repeticoes",
+    "repeticoes": 10,
+    "manter_s": 5,
+    "bilateral": true,
+    "alvo": [
+      "lombar",
+      "glúteos"
+    ],
+    "posicao": "deitado",
+    "equipamento": [],
+    "imagem": "img/fotos/joelho-peito-alternado.jpg",
+    "instrucoes": [
+      "Deitado de costas, joelhos dobrados.",
+      "Traz um joelho ao peito, segura com as mãos, sem forçar.",
+      "Mantém uns segundos e volta. Alterna as pernas."
+    ],
+    "pistas": [
+      "a outra perna fica apoiada",
+      "puxa com suavidade, sem dor"
+    ],
+    "evitar_se": [
+      "dor aguda a irradiar para a perna"
+    ]
+  },
+  {
+    "id": "rotacao-lombar-suave",
+    "nome": "Rotação lombar suave",
+    "categoria": "mobilidade",
+    "tipo": "repeticoes",
+    "repeticoes": 10,
+    "bilateral": false,
+    "alvo": [
+      "lombar",
+      "oblíquos"
+    ],
+    "posicao": "deitado",
+    "equipamento": [],
+    "imagem": "img/fotos/rotacao-lombar-suave.jpg",
+    "instrucoes": [
+      "Deitado de costas, joelhos dobrados e juntos, braços abertos.",
+      "Deixa os joelhos cair lentamente para um lado, sem dor, e volta ao centro.",
+      "Faz o mesmo para o outro lado. Dez para cada lado."
+    ],
+    "pistas": [
+      "ombros ficam no chão",
+      "pára antes da dor"
+    ],
+    "evitar_se": [
+      "dor aguda a irradiar para a perna"
+    ]
+  },
+  {
+    "id": "ponte-gluteos",
+    "nome": "Ponte de glúteos",
+    "categoria": "mobilidade",
+    "tipo": "repeticoes",
+    "repeticoes": 12,
+    "manter_s": 4,
+    "bilateral": false,
+    "alvo": [
+      "glúteos",
+      "lombar"
+    ],
+    "posicao": "deitado",
+    "equipamento": [],
+    "imagem": "img/fotos/ponte-gluteos.jpg",
+    "instrucoes": [
+      "Deitado de costas, joelhos dobrados, pés no chão à largura da anca.",
+      "Activa o abdómen e eleva a bacia, contraindo os glúteos, até o tronco ficar alinhado com as coxas.",
+      "Mantém uns segundos e desce lentamente."
+    ],
+    "pistas": [
+      "força nos glúteos, não na lombar",
+      "não arqueies as costas em cima"
+    ],
+    "evitar_se": [
+      "dor lombar aguda ao elevar"
+    ]
+  },
+  {
+    "id": "bird-dog",
+    "nome": "Bird dog, mão e perna oposta",
+    "categoria": "mobilidade",
+    "tipo": "repeticoes",
+    "repeticoes": 10,
+    "manter_s": 4,
+    "bilateral": false,
+    "alvo": [
+      "core",
+      "lombar",
+      "glúteos"
+    ],
+    "posicao": "ajoelhado",
+    "equipamento": [],
+    "imagem": "img/fotos/bird-dog.jpg",
+    "instrucoes": [
+      "De quatro apoios, mãos sob os ombros, joelhos sob a anca, coluna neutra.",
+      "Estende um braço à frente e a perna oposta atrás, sem rodar o tronco nem arquear as costas.",
+      "Mantém uns segundos, volta com controlo e alterna os lados. Dez para cada lado."
+    ],
+    "pistas": [
+      "anca nivelada, sem rodar",
+      "olhar para o chão, pescoço alinhado"
+    ],
+    "evitar_se": [
+      "dor no punho ou no joelho em quatro apoios"
     ]
   }
 ]

@@ -22,7 +22,7 @@ test('bilateral gera esquerdo e direito com descanso entre passos', () => {
   assert.deepEqual(p.filter((x) => x.tipo === 'exercicio').map((x) => x.lado), ['esquerdo', 'direito', null]);
   assert.equal(p.at(-1).duracao_s, 12, 'a rotina sobrepõe a duração por omissão');
   assert.equal(duracaoTotalS(p), 30 + 5 + 30 + 5 + 12);
-  assert.equal(contarExercicios(p), 3);
+  assert.equal(contarExercicios(p), 2, 'bilateral conta uma vez');
 });
 
 test('sessão avança sozinha, recua e termina', () => {
@@ -39,4 +39,19 @@ test('sessão avança sozinha, recua e termina', () => {
   assert.equal(s.terminada, true);
   assert.equal(eventos.at(-1), 'fim');
   assert.ok(eventos.includes('contagem'), 'emite a contagem final');
+});
+
+test('exercício por repetições não tem duração e a sessão não avança sozinha', () => {
+  const r = { id: 'x', descanso_s: 0, passos: [{ exercicio: 'ponte-gluteos' }, { exercicio: 'punhos-extensao', duracao_s: 1 }] };
+  const p = expandirRotina(r, exercicios);
+  assert.equal(p[0].duracao_s, null);
+  assert.equal(p[0].repeticoes, 12);
+  assert.equal(p[0].manter_s, 4);
+  assert.equal(duracaoTotalS(p), 12 * (4 + 4) + 1 + 1);
+  const s = criarSessao(p, {});
+  s.iniciar(0);
+  s.tick(60000);
+  assert.equal(s.indice, 0, 'fica no passo por repetições até carregar em Feito');
+  s.seguinte(60000);
+  assert.equal(s.indice, 1);
 });

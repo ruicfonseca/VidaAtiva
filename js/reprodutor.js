@@ -1,5 +1,5 @@
 import { criarSessao } from './sessao.js';
-import { expandirRotina, contarExercicios, duracaoTotalS } from './rotina.js';
+import { expandirRotina, contarExercicios, duracaoTotalS, estimarS } from './rotina.js';
 import { falar, vibrar, desbloquear, vozActiva, alternarVoz } from './voz.js';
 import { registarSessao } from './historico.js';
 import { inserirImagens } from './catalogo.js';
@@ -52,7 +52,7 @@ export function iniciarReprodutor({ rotina, exercicios, raiz, aoTerminar }) {
     const t = Date.now();
     if (accao === 'anterior') sessao.anterior(t);
     if (accao === 'seguinte') sessao.seguinte(t);
-    if (accao === 'pausa') sessao.alternarPausa(t);
+    if (accao === 'pausa') { if (sessao.passo.duracao_s == null) sessao.seguinte(t); else sessao.alternarPausa(t); }
     if (accao === 'sair') sessao.abandonar(t);
     if (accao === 'voz') el('voz').textContent = alternarVoz() ? '🔊' : '🔇';
   });
@@ -75,16 +75,25 @@ export function iniciarReprodutor({ rotina, exercicios, raiz, aoTerminar }) {
   }
 
   function mostrarPasso(indice, passo) {
-    decorridoAntesS = passos.slice(0, indice).reduce((s, p) => s + p.duracao_s, 0);
-    exerciciosFeitos = passos.slice(0, indice).filter((p) => p.tipo === 'exercicio').length;
+    decorridoAntesS = passos.slice(0, indice).reduce((s, p) => s + estimarS(p), 0);
+    exerciciosFeitos = new Set(passos.slice(0, indice).filter((p) => p.tipo === 'exercicio').map((p) => p.ordem)).size;
     const proximo = passos.slice(indice + 1).find((p) => p.tipo === 'exercicio');
     const ex = passo.tipo === 'exercicio' ? passo.exercicio : passo.seguinte.exercicio;
     const lado = passo.tipo === 'exercicio' ? passo.lado : passo.seguinte.lado;
 
+    const porRepeticoes = passo.tipo === 'exercicio' && passo.duracao_s == null;
     raiz.querySelector('.reprodutor').classList.toggle('reprodutor--descanso', passo.tipo === 'descanso');
-    el('contador').textContent = `Exercício ${Math.min(exerciciosFeitos + 1, totalExercicios)} de ${totalExercicios}`;
+    raiz.querySelector('.reprodutor').classList.toggle('reprodutor--repeticoes', porRepeticoes);
+    el('pausa').textContent = porRepeticoes ? 'Feito' : '❚❚';
+    el('pausa').setAttribute('aria-label', porRepeticoes ? 'Feito, passar ao seguinte' : 'Pausa');
+    if (porRepeticoes) {
+      el('tempo').textContent = `${passo.repeticoes}×`;
+      el('lado').textContent = (lado ? `Lado ${lado} · ` : '') + (passo.manter_s ? `manter ${passo.manter_s} s` : 'lento e controlado');
+    }
+    const actual = passos.slice(indice).find((p) => p.tipo === 'exercicio');
+    el('contador').textContent = `Exercício ${(actual?.ordem ?? totalExercicios - 1) + 1} de ${totalExercicios}`;
     el('nome').textContent = passo.tipo === 'descanso' ? 'Descanso' : ex.nome;
-    el('lado').textContent = passo.tipo === 'descanso' ? `A seguir: ${ex.nome}${lado ? `, lado ${lado}` : ''}` : (lado ? `Lado ${lado}` : '');
+    if (!porRepeticoes) el('lado').textContent = passo.tipo === 'descanso' ? `A seguir: ${ex.nome}${lado ? `, lado ${lado}` : ''}` : (lado ? `Lado ${lado}` : '');
     el('pista').textContent = passo.tipo === 'descanso' ? '' : (ex.pistas[passo.parte % ex.pistas.length] ?? '');
     el('seguinte').textContent = passo.tipo === 'descanso' ? '' : (proximo ? `A seguir: ${proximo.exercicio.nome}${proximo.lado ? `, lado ${proximo.lado}` : ''}` : 'Último exercício');
     el('ilustracao').dataset.imagem = ex.imagem;
@@ -93,15 +102,21 @@ export function iniciarReprodutor({ rotina, exercicios, raiz, aoTerminar }) {
     vibrar(200);
     if (passo.tipo === 'descanso') {
       falar(`Descanso. A seguir, ${ex.nome}${lado ? `, lado ${lado}` : ''}.`);
+    } else if (porRepeticoes) {
+      falar(`${ex.nome}${lado ? `, lado ${lado}` : ''}. ${passo.repeticoes} repetições${passo.manter_s ? `, manter ${passo.manter_s} segundos` : ''}. ${el('pista').textContent}`);
     } else {
       falar(`${ex.nome}${lado ? `, lado ${lado}` : ''}. ${passo.duracao_s} segundos. ${el('pista').textContent}`);
     }
   }
 
-  function mostrarTempo({ restanteMs, restanteS }) {
-    el('tempo').textContent = restanteS;
-    const passoS = sessao.passo.duracao_s;
-    const decorrido = decorridoAntesS + (passoS - restanteMs / 1000);
+  function mostrarTempo({ restanteS, decorridoMs }) {
+    const passo = sessao.passo;
+    if (passo.duracao_s == null) {
+      el('seguinte').textContent = `${Math.floor(decorridoMs / 1000)} s neste passo`;
+    } else {
+      el('tempo').textContent = restanteS;
+    }
+    const decorrido = decorridoAntesS + Math.min(decorridoMs / 1000, estimarS(passo));
     el('progresso').style.width = `${Math.min(100, (decorrido / totalS) * 100)}%`;
   }
 

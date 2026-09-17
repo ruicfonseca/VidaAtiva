@@ -111,5 +111,38 @@
         "exercicio": "ombros-passagem-elastico"
       }
     ]
+  },
+  {
+    "id": "coluna-lombar",
+    "nome": "Coluna lombar",
+    "descricao": "Mobilidade, controlo e estabilidade da lombar. Baseada no plano de exercício que te foi entregue: 3 a 5 vezes por semana, conforme a tolerância.",
+    "aviso": "Plano a validar pelo teu médico ou fisioterapeuta. Pára e procura avaliação se a dor aumentar, irradiar para a perna, ou se houver formigueiro, dormência ou perda de força.",
+    "descanso_s": 8,
+    "passos": [
+      {
+        "exercicio": "respiracao-diafragmatica"
+      },
+      {
+        "exercicio": "bascula-pelvica"
+      },
+      {
+        "exercicio": "joelho-peito-alternado"
+      },
+      {
+        "exercicio": "rotacao-lombar-suave"
+      },
+      {
+        "exercicio": "ponte-gluteos"
+      },
+      {
+        "exercicio": "bird-dog"
+      },
+      {
+        "exercicio": "isquiotibiais-elastico-deitado"
+      },
+      {
+        "exercicio": "gluteos-figura4"
+      }
+    ]
   }
 ]

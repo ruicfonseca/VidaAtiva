@@ -29,8 +29,7 @@ export function criarSessao(passos, { aoMudar = () => {} } = {}) {
     seguinte(t) { irPara(indice + 1, t); },
     anterior(t) {
       // Se já passou mais de 2 s do passo, recomeça o passo; senão volta atrás.
-      const decorrido = passos[indice].duracao_s * 1000 - temporizador.restanteMs;
-      irPara(decorrido > 2000 ? indice : indice - 1, t);
+      irPara(temporizador.decorridoMs > 2000 ? indice : indice - 1, t);
     },
     alternarPausa(t) {
       if (temporizador.pausado) temporizador.iniciar(t); else temporizador.pausar(t);
@@ -46,7 +45,7 @@ export function criarSessao(passos, { aoMudar = () => {} } = {}) {
         ultimosAvisos.add(restanteS);
         aoMudar({ tipo: 'contagem', restanteS });
       }
-      aoMudar({ tipo: 'tick', restanteMs: temporizador.restanteMs, restanteS });
+      aoMudar({ tipo: 'tick', restanteMs: temporizador.restanteMs, restanteS, decorridoMs: temporizador.decorridoMs });
       if (temporizador.terminado) irPara(indice + 1, t);
     },
     get indice() { return indice; },

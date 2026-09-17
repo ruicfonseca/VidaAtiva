@@ -24,8 +24,17 @@ export async function carregarImagem(url) {
 export async function inserirImagens(raiz) {
   const alvos = [...raiz.querySelectorAll('[data-imagem]')];
   await Promise.all(alvos.map(async (el) => {
-    const svg = await carregarImagem(el.dataset.imagem);
+    const url = el.dataset.imagem;
+    if (/\.(jpe?g|png|webp)$/i.test(url)) {
+      const img = document.createElement('img');
+      img.src = url; img.alt = ''; img.loading = 'lazy';
+      el.replaceChildren(img);
+      el.classList.add('ilustracao--foto');
+      return;
+    }
+    const svg = await carregarImagem(url);
     // Só inserimos SVG do nosso próprio repositório.
     el.innerHTML = svg.startsWith('<svg') ? svg : '';
+    el.classList.remove('ilustracao--foto');
   }));
 }
